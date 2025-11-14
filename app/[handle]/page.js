@@ -61,7 +61,7 @@
 import clientPromise from "@/lib/mongodb";
 import { notFound } from "next/navigation";
 import SocialProfileCard from "@/components/SocialProfileCard";
-
+import Watermark from "@/components/Watermark";
 export default async function Page({ params }) {
       const handle = (await params).handle
     const client = await clientPromise;
@@ -78,6 +78,7 @@ export default async function Page({ params }) {
         desc={item.desc}
         links={item.links}
       />
+      <Watermark/>
     </div>
   );
 }

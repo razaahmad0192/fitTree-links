@@ -2,7 +2,7 @@
 import React, { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import GenerateForm from "./GenerateForm"; // The new client component
-
+import Watermark from "@/components/Watermark";
 export default function Page() {
   return (
     <section className="bg-[#E9C0E9]">
@@ -12,6 +12,7 @@ export default function Page() {
       <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
         <GenerateForm/>
       </Suspense>
+      <Watermark/>
     </section>
   );
 }
