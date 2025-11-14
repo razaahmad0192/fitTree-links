@@ -6,8 +6,7 @@ import GenerateForm from "./GenerateForm"; // The new client component
 export default function Page() {
   return (
     <section className="bg-[#E9C0E9]">
-      {/* Navbar is fine to render server-side */}
-      <Navbar />
+     
 
       {/* Wrap the client form in Suspense */}
       <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
