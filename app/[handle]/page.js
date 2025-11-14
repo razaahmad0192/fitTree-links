@@ -57,6 +57,7 @@
 //     </div>
 // }
 // pages/[handle].jsx
+
 import clientPromise from "@/lib/mongodb";
 import { notFound } from "next/navigation";
 import SocialProfileCard from "@/components/SocialProfileCard";
@@ -69,8 +70,6 @@ export default async function Page({ params }) {
 
   const item = await collection.findOne({ handle : handle });
   if (!item) return notFound();
-    console.log(item);
-    console.log("This is the item");
   return (
     <div className="flex min-h-screen justify-center items-center   bg-black">
       <SocialProfileCard
